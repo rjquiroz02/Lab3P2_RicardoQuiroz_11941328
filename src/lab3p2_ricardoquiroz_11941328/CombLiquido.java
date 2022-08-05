@@ -30,7 +30,7 @@ public class CombLiquido extends Cohetes{
 
     @Override
     public String toString() {
-        return "CombLiquido{" + "lgas=" + lgas + '}';
+        return "CombLiquido{" + "litros gasolina=" + lgas + '}';
     }
     
     

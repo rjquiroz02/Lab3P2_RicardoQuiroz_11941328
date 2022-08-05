@@ -55,7 +55,25 @@ static Scanner lea = new Scanner(System.in);
                     System.out.print("Tipo: ");
                     tipo = lea.nextInt();
                 }
-                
+                if (tipo==1) {
+                    System.out.print("Litros de gasolina: ");
+                    int lgas = lea.nextInt();
+                }
+                if (tipo==2) {
+                    System.out.print("Fases: ");
+                    int fases = lea.nextInt();
+                    System.out.print("Motores: ");
+                    int motores = lea.nextInt();
+                    System.out.print("Altura: ");
+                    int altura = lea.nextInt();
+                }
+                if (tipo==3) {
+                    System.out.print("Kilos combustible ");
+                    int kiloscomb = lea.nextInt();
+                    System.out.println("Material: ");
+                    lea = new Scanner(System.in);
+                    String material = lea.nextLine();
+                }
                 
                 cent=true;
             }

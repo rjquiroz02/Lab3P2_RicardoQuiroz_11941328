@@ -40,7 +40,7 @@ public class CombSolido extends Cohetes{
 
     @Override
     public String toString() {
-        return "CombSolido{" + "kiloscomb=" + kiloscomb + ", material=" + material + '}';
+        return "CombSolido{" + "kilos combustible=" + kiloscomb + ", material=" + material + '}';
     }
     
     
