@@ -33,6 +33,15 @@ static Scanner lea = new Scanner(System.in);
             menu = lea.nextInt();
             System.out.println();
             if (menu==1) {
+                System.out.print("Peso soportable: ");
+                int peso = lea.nextInt();
+                System.out.print("Nombre: ");
+                lea = new Scanner(System.in);
+                String nombre = lea.nextLine();
+                System.out.print("Serie: ");
+                String serie = lea.next();
+                System.out.print("Potencia: ");
+                int potencia = lea.nextInt();
                 
                 
                 cent=true;
