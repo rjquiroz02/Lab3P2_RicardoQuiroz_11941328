@@ -16,7 +16,7 @@ public class Rocosos extends Planetas{
     public Rocosos(){        
     }
 
-    public Rocosos(int densidad, boolean vida, String nombre, long masa, long radio, long temperatura, long vel) {
+    public Rocosos(int densidad, boolean vida, String nombre, long masa, long radio, long temperatura, double vel) {
         super(nombre, masa, radio, temperatura, vel);
         this.densidad = densidad;
         this.vida = vida;
@@ -40,7 +40,7 @@ public class Rocosos extends Planetas{
 
     @Override
     public String toString() {
-        return "Rocosos{" + "densidad=" + densidad + ", vida=" + vida + '}';
+        return super.toString()+"Rocosos{" + "densidad=" + densidad + ", vida=" + vida + '}';
     }
     
     

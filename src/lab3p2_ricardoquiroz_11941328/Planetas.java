@@ -13,13 +13,14 @@ import java.util.ArrayList;
  */
 public class Planetas {
     private String nombre;
-    private long masa, radio, temperatura, vel;
+    private long masa, radio, temperatura;
+    private double vel;
     private ArrayList<Lunas> luna = new ArrayList();
     
     public Planetas(){        
     }
 
-    public Planetas(String nombre, long masa, long radio, long temperatura, long vel) {
+    public Planetas(String nombre, long masa, long radio, long temperatura, double vel) {
         this.nombre = nombre;
         this.masa = masa;
         this.radio = radio;
@@ -59,11 +60,11 @@ public class Planetas {
         this.temperatura = temperatura;
     }
 
-    public long getVel() {
+    public double getVel() {
         return vel;
     }
 
-    public void setVel(long vel) {
+    public void setVel(double vel) {
         this.vel = vel;
     }
 
@@ -77,7 +78,7 @@ public class Planetas {
 
     @Override
     public String toString() {
-        return "Planetas{" + "nombre=" + nombre + ", masa=" + masa + ", radio=" + radio + ", temperatura=" + temperatura + ", velocidad de escape=" + vel + ", lunas=" + luna + '}';
+        return "Planeta{" + "nombre=" + nombre + ", masa=" + masa + ", radio=" + radio + ", temperatura=" + temperatura + ", velocidad de escape=" + vel + ", lunas=" + luna + '}';
     }
 
     

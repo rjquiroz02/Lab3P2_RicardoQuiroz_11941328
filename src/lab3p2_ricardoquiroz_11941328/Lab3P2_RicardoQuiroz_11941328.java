@@ -47,6 +47,11 @@ static Random rand = new Random();
                 String serie = lea.next();
                 System.out.print("Potencia: ");
                 int potencia = lea.nextInt();
+                while (potencia > 9 && potencia < 1) {                    
+                    System.out.println("Ingrese una potencia correcta[1-9]");
+                    System.out.print("Potencia: ");
+                    potencia = lea.nextInt();
+                }
                 int velocidad;
                 velocidad = (5000*potencia) + (rand.nextInt(20000*potencia-5000*potencia));
                 System.out.println("1. Liquido");
@@ -85,7 +90,47 @@ static Random rand = new Random();
                 cent=true;
             }
             if (menu==2) {
-                
+                System.out.print("Nombre: ");
+                lea = new Scanner(System.in);
+                String nombre = lea.nextLine();
+                System.out.print("Masa: ");
+                long masa = lea.nextLong();
+                System.out.print("Radio: ");
+                long radio = lea.nextLong();
+                System.out.print("Temperatura: ");
+                long temperatura = lea.nextLong();
+                double vel;
+                double g;
+                double num;
+                double frac;
+                g = 6.67*(Math.pow(10,-11));
+                num = 2 * g * masa;
+                frac = num/radio;
+                vel = Math.sqrt(frac);
+                System.out.println("1. Rocoso");
+                System.out.println("2. Gaseoso");
+                System.out.print("Tipo: ");
+                int tipo = lea.nextInt();
+                while (tipo > 2 && tipo < 1) {                    
+                    System.out.println("Ingrese un tipo correcto");
+                    System.out.print("Tipo: ");
+                    tipo = lea.nextInt();
+                }
+                if (tipo==1) {
+                    System.out.print("Densidad: ");
+                    int densidad = lea.nextInt();
+                    System.out.print("Hay vida[No=0]: ");
+                    int respuesta = lea.nextInt();
+                    boolean vida = lea.nextInt() != 0;                 
+                    listaP.add(new Rocosos(densidad, vida, nombre, masa, radio, temperatura, vel));
+                }
+                if (tipo==2) {
+                    System.out.print("Presion: ");
+                    long presion = lea.nextLong();
+                    System.out.println("Anillos: ");
+                    int anillos = lea.nextInt();
+                    listaP.add(new Gaseosos(presion, anillos, nombre, masa, radio, temperatura, vel));
+                }
                 
                 cent=true;
             }
@@ -100,12 +145,20 @@ static Random rand = new Random();
                 cent=true;
             }
             if (menu==5) {
-                
+                String out = "";
+                            for (Cohetes object : listaC) {                               
+                                    out+="["+listaC.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
+                            }
+                            System.out.println(out);
                 
                 cent=true;
             }
             if (menu==6) {
-                
+                String out = "";
+                            for (Planetas object : listaP) {                               
+                                    out+="["+listaP.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
+                            }
+                            System.out.println(out);
                 
                 cent=true;
             }

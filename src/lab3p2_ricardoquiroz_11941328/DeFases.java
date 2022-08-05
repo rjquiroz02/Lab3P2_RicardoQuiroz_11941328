@@ -48,7 +48,7 @@ public class DeFases extends Cohetes{
 
     @Override
     public String toString() {
-        return "DeFases{" + "fases=" + fases + ", motores=" + motores + ", altura=" + altura + '}';
+        return super.toString()+"De Fases{" + "fases=" + fases + ", motores=" + motores + ", altura=" + altura + '}';
     }
     
     

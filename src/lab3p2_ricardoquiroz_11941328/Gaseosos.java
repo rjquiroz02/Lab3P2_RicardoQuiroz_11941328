@@ -16,7 +16,7 @@ public class Gaseosos extends Planetas{
     public Gaseosos(){        
     }
 
-    public Gaseosos(long presion, int anillos, String nombre, long masa, long radio, long temperatura, long vel) {
+    public Gaseosos(long presion, int anillos, String nombre, long masa, long radio, long temperatura, double vel) {
         super(nombre, masa, radio, temperatura, vel);
         this.presion = presion;
         this.anillos = anillos;
@@ -40,7 +40,7 @@ public class Gaseosos extends Planetas{
 
     @Override
     public String toString() {
-        return "Gaseosos{" + "presion=" + presion + ", anillos=" + anillos + '}';
+        return super.toString()+"Gaseosos{" + "presion=" + presion + ", anillos=" + anillos + '}';
     }
     
     

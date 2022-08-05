@@ -60,7 +60,7 @@ public class Cohetes {
         this.serie = serie;
     }
 
-    public long getVelocidad() {
+    public int getVelocidad() {
         return velocidad;
     }
 
@@ -78,7 +78,7 @@ public class Cohetes {
 
     @Override
     public String toString() {
-        return "Cohetes{" + "peso=" + peso + ", potencia=" + potencia + ", nombre=" + nombre + ", serie=" + serie + ", velocidad=" + velocidad + ", personas=" + persona + '}';
+        return "Cohete{" + "peso=" + peso + ", potencia=" + potencia + ", nombre=" + nombre + ", serie=" + serie + ", velocidad=" + velocidad + ", personas=" + persona + '}';
     }
     
        
