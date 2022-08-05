@@ -120,7 +120,6 @@ static Random rand = new Random();
                     System.out.print("Densidad: ");
                     int densidad = lea.nextInt();
                     System.out.print("Hay vida[No=0]: ");
-                    int respuesta = lea.nextInt();
                     boolean vida = lea.nextInt() != 0;                 
                     listaP.add(new Rocosos(densidad, vida, nombre, masa, radio, temperatura, vel));
                 }
