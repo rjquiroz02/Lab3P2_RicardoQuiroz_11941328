@@ -47,7 +47,7 @@ static Random rand = new Random();
                 String serie = lea.next();
                 System.out.print("Potencia: ");
                 int potencia = lea.nextInt();
-                while (potencia > 9 && potencia < 1) {                    
+                while (potencia > 9 || potencia < 1) {                    
                     System.out.println("Ingrese una potencia correcta[1-9]");
                     System.out.print("Potencia: ");
                     potencia = lea.nextInt();
@@ -59,7 +59,7 @@ static Random rand = new Random();
                 System.out.println("3. Solido");
                 System.out.print("Tipo: ");
                 int tipo = lea.nextInt();
-                while (tipo > 3 && tipo < 1) {                    
+                while (tipo > 3 || tipo < 1) {                    
                     System.out.println("Ingrese un tipo correcto");
                     System.out.print("Tipo: ");
                     tipo = lea.nextInt();
@@ -111,7 +111,7 @@ static Random rand = new Random();
                 System.out.println("2. Gaseoso");
                 System.out.print("Tipo: ");
                 int tipo = lea.nextInt();
-                while (tipo > 2 && tipo < 1) {                    
+                while (tipo > 2 || tipo < 1) {                    
                     System.out.println("Ingrese un tipo correcto");
                     System.out.print("Tipo: ");
                     tipo = lea.nextInt();
@@ -134,30 +134,94 @@ static Random rand = new Random();
                 cent=true;
             }
             if (menu==3) {
-                
-                
-                cent=true;
-            }
-            if (menu==4) {
-                
-                
-                cent=true;
-            }
-            if (menu==5) {
+                System.out.println("-------------------------------Cohetes-------------------------------------------");
                 String out = "";
                             for (Cohetes object : listaC) {                               
                                     out+="["+listaC.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
                             }
                             System.out.println(out);
+                System.out.println("---------------------------------------------------------------------------------");
+                System.out.print("Ingrese el indice del cohete que quiere editar: ");
+                int indice = lea.nextInt();
+                System.out.println("0. Salir");
+                System.out.println("1. Agregar persona");
+                System.out.println("2. Eliminar persona");
+                System.out.println("3. Listar personas");
+                boolean cent3;
+                int sub3 = 1;
+                while (sub3 != 0) {                    
+                    cent3 = false;
+                    if (sub3==1) {
+                        System.out.print("Nombre: ");
+                        lea = new Scanner(System.in);
+                        String nombre = lea.nextLine();
+                        System.out.print("Edad: ");
+                        int edad = lea.nextInt();
+                        System.out.print("Peso: ");
+                        int peso = lea.nextInt();
+                        listaC.get(indice).getPersona().add(new Personas(nombre, edad, peso));                                               
+                        
+                        cent = true;
+                    }
+                    if (sub3==2) {
+                        System.out.print("Ingrese indice del cliente a borrar: ");
+                        int indice2 = lea.nextInt();
+                        listaC.get(indice).getPersona().remove(indice2);
+                        System.out.println("Persona eliminada");
+                        
+                        cent = true;
+                    }
+                    if (sub3==3) {
+                        System.out.println("-------------------------------Personas-------------------------------------------");
+                        String out1 = "";
+                            for (Personas object : listaC.get(indice).getPersona()) {                               
+                                    out1+="["+listaC.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
+                            }
+                            System.out.println(out1);
+                        System.out.println("----------------------------------------------------------------------------------"); 
+                        
+                        cent = true;
+                    }
+                    if (!cent && sub3!=0) {
+                        System.out.println("Ingrese opcion correcta del submenu");
+                    }
+                }
                 
                 cent=true;
             }
-            if (menu==6) {
+            if (menu==4) {
+                System.out.println("-------------------------------Planetas------------------------------------------");
                 String out = "";
                             for (Planetas object : listaP) {                               
                                     out+="["+listaP.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
                             }
                             System.out.println(out);
+                System.out.println("---------------------------------------------------------------------------------");
+                System.out.print("Ingrese el indice del planeta que quiere editar: ");
+                int indice = lea.nextInt();
+                
+                
+                cent=true;
+            }
+            if (menu==5) {
+                System.out.println("-------------------------------Cohetes-------------------------------------------");
+                String out = "";
+                            for (Cohetes object : listaC) {                               
+                                    out+="["+listaC.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
+                            }
+                            System.out.println(out);
+                System.out.println("---------------------------------------------------------------------------------");
+                
+                cent=true;
+            }
+            if (menu==6) {
+                System.out.println("-------------------------------Planetas------------------------------------------");
+                String out = "";
+                            for (Planetas object : listaP) {                               
+                                    out+="["+listaP.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
+                            }
+                            System.out.println(out);
+                System.out.println("---------------------------------------------------------------------------------");
                 
                 cent=true;
             }
