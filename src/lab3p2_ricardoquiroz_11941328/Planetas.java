@@ -67,20 +67,18 @@ public class Planetas {
         this.vel = vel;
     }
 
-    public ArrayList getLunas() {
-        return lunas;
+    public ArrayList<Lunas> getLuna() {
+        return luna;
     }
 
-    public void setLunas(ArrayList lunas) {
-        this.lunas = lunas;
+    public void setLuna(ArrayList<Lunas> luna) {
+        this.luna = luna;
     }
 
     @Override
     public String toString() {
-        return "Planetas{" + "nombre=" + nombre + ", masa=" + masa + ", radio=" + radio + ", temperatura=" + temperatura + ", vel=" + vel + ", lunas=" + lunas + '}';
+        return "Planetas{" + "nombre=" + nombre + ", masa=" + masa + ", radio=" + radio + ", temperatura=" + temperatura + ", vel=" + vel + ", luna=" + luna + '}';
     }
-    
-    
-    
+
     
 }//public class
