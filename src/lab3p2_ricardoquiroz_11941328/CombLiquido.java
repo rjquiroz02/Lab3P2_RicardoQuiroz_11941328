@@ -10,7 +10,7 @@ package lab3p2_ricardoquiroz_11941328;
  * @author rjqer
  */
 public class CombLiquido extends Cohetes{
-    int lgas;
+    private int lgas;
     
     public CombLiquido(){
     }

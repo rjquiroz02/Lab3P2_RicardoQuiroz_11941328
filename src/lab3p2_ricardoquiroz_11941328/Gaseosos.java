@@ -10,8 +10,8 @@ package lab3p2_ricardoquiroz_11941328;
  * @author rjqer
  */
 public class Gaseosos extends Planetas{
-    long presion;
-    int anillos;
+    private long presion;
+    private int anillos;
     
     public Gaseosos(){        
     }

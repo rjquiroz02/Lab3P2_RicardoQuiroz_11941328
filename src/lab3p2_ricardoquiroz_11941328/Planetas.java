@@ -12,9 +12,9 @@ import java.util.ArrayList;
  * @author rjqer
  */
 public class Planetas {
-    String nombre;
-    long masa, radio, temperatura, vel;
-    ArrayList lunas = new ArrayList();
+    private String nombre;
+    private long masa, radio, temperatura, vel;
+    private ArrayList<Lunas> luna = new ArrayList();
     
     public Planetas(){        
     }

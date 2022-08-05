@@ -10,8 +10,8 @@ package lab3p2_ricardoquiroz_11941328;
  * @author rjqer
  */
 public class Lunas {
-    String nombre;
-    int crateres;
+    private String nombre;
+    private int crateres;
     
     public Lunas(){        
     }

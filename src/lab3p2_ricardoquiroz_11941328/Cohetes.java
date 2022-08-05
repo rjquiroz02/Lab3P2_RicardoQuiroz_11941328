@@ -5,14 +5,17 @@
  */
 package lab3p2_ricardoquiroz_11941328;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author rjqer
  */
 public class Cohetes {
-    int peso, potencia;
-    String nombre, serie;
-    long velocidad;
+    private int peso, potencia;
+    private String nombre, serie;
+    private long velocidad;
+    ArrayList<Personas> persona = new ArrayList();
     
     public Cohetes(){       
     }
@@ -65,11 +68,18 @@ public class Cohetes {
         this.velocidad = velocidad;
     }
 
+    public ArrayList<Personas> getPersona() {
+        return persona;
+    }
+
+    public void setPersona(ArrayList<Personas> persona) {
+        this.persona = persona;
+    }
+
     @Override
     public String toString() {
-        return "Cohetes{" + "peso=" + peso + ", potencia=" + potencia + ", nombre=" + nombre + ", serie=" + serie + ", velocidad=" + velocidad + '}';
+        return "Cohetes{" + "peso=" + peso + ", potencia=" + potencia + ", nombre=" + nombre + ", serie=" + serie + ", velocidad=" + velocidad + ", persona=" + persona + '}';
     }
     
-    
-    
+       
 }

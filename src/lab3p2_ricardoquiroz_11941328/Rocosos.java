@@ -10,8 +10,8 @@ package lab3p2_ricardoquiroz_11941328;
  * @author rjqer
  */
 public class Rocosos extends Planetas{
-    int densidad;
-    boolean vida;
+    private int densidad;
+    private boolean vida;
     
     public Rocosos(){        
     }
