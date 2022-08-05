@@ -284,7 +284,24 @@ static Random rand = new Random();
                 cent=true;
             }
             if (menu==7) {
-                
+                System.out.print("Seleccione el planeta: ");
+                int indice = lea.nextInt();
+                System.out.println("1. Un cohete");
+                System.out.println("2. Todos los cohetes");
+                System.out.print("Ingrese la opcion: "); 
+                int opcion = lea.nextInt();
+                while (opcion > 2 && opcion < 1) {                    
+                    System.out.println("Ingrese opcion correta");
+                    System.out.print("Ingrese la opcion: "); 
+                    opcion = lea.nextInt();
+                }
+                if (opcion==1) {
+                    System.out.print("Ingrese el indice del cohete: ");
+                    int cohete = lea.nextInt();
+                }
+                if (opcion==2) {
+                    
+                }
                 
                 cent=true;
             }
