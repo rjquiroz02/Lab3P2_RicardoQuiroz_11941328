@@ -161,15 +161,22 @@ static Random rand = new Random();
                         int peso = lea.nextInt();
                         listaC.get(indice).getPersona().add(new Personas(nombre, edad, peso));                                               
                         
-                        cent = true;
+                        cent3 = true;
                     }
                     if (sub3==2) {
+                        System.out.println("-------------------------------Personas-------------------------------------------");
+                        String out1 = "";
+                            for (Personas object : listaC.get(indice).getPersona()) {                               
+                                    out1+="["+listaC.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
+                            }
+                            System.out.println(out1);
+                        System.out.println("----------------------------------------------------------------------------------");
                         System.out.print("Ingrese indice del cliente a borrar: ");
                         int indice2 = lea.nextInt();
                         listaC.get(indice).getPersona().remove(indice2);
                         System.out.println("Persona eliminada");
                         
-                        cent = true;
+                        cent3 = true;
                     }
                     if (sub3==3) {
                         System.out.println("-------------------------------Personas-------------------------------------------");
@@ -180,9 +187,9 @@ static Random rand = new Random();
                             System.out.println(out1);
                         System.out.println("----------------------------------------------------------------------------------"); 
                         
-                        cent = true;
+                        cent3 = true;
                     }
-                    if (!cent && sub3!=0) {
+                    if (!cent3 && sub3!=0) {
                         System.out.println("Ingrese opcion correcta del submenu");
                     }
                 }
@@ -199,7 +206,54 @@ static Random rand = new Random();
                 System.out.println("---------------------------------------------------------------------------------");
                 System.out.print("Ingrese el indice del planeta que quiere editar: ");
                 int indice = lea.nextInt();
-                
+                System.out.println("0. Salir");
+                System.out.println("1. Agregar luna");
+                System.out.println("2. Eliminar luna");
+                System.out.println("3. Listar lunas");
+                boolean cent4;
+                int sub4 = 1;
+                while (sub4 != 0) {                    
+                    cent4 = false;
+                    if (sub4==1) {
+                        System.out.print("Nombre: ");
+                        lea = new Scanner(System.in);
+                        String nombre = lea.nextLine();
+                        System.out.print("Crateres: ");
+                        int crateres = lea.nextInt();
+                        listaP.get(indice).getLuna().add(new Lunas(nombre, crateres));
+                        
+                        cent4 = true;
+                    }
+                    if (sub4==2) {
+                        System.out.println("-------------------------------Lunas-------------------------------------------");
+                        String out1 = "";
+                            for (Lunas object : listaP.get(indice).getLuna()) {                               
+                                    out1+="["+listaC.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
+                            }
+                            System.out.println(out1);
+                        System.out.println("-------------------------------------------------------------------------------");
+                        System.out.print("Ingrese indice de la luna a borrar: ");
+                        int indice2 = lea.nextInt();
+                        listaP.get(indice).getLuna().remove(indice2);
+                        System.out.println("Luna eliminada");
+                        
+                        cent4 = true;
+                    }
+                    if (sub4==3) {
+                        System.out.println("-------------------------------Lunas-------------------------------------------");
+                        String out1 = "";
+                            for (Personas object : listaC.get(indice).getPersona()) {                               
+                                    out1+="["+listaC.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
+                            }
+                            System.out.println(out1);
+                        System.out.println("-------------------------------------------------------------------------------"); 
+                        
+                        cent4 = true;
+                    }
+                    if (!cent4 && sub4!=0) {
+                        System.out.println("Ingrese opcion correcta del submenu");
+                    }
+                }
                 
                 cent=true;
             }
