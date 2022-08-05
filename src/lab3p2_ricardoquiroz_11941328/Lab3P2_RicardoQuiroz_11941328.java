@@ -18,7 +18,7 @@ static Scanner lea = new Scanner(System.in);
      */
     public static void main(String[] args) {
         boolean cent;
-        int menu=0;
+        int menu=1;
         while (menu != 0) {            
             cent=false;
             System.out.println("0. Salir");
@@ -67,7 +67,10 @@ static Scanner lea = new Scanner(System.in);
                 
                 cent=true;
             }
-            
+            if (!cent && menu!=0) {
+                System.out.println("Ingrese una opcion correcta del menu");
+                System.out.println();
+            }
         }//while
     }//void main
     
