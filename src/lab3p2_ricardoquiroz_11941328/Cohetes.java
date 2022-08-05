@@ -10,5 +10,66 @@ package lab3p2_ricardoquiroz_11941328;
  * @author rjqer
  */
 public class Cohetes {
+    int peso, potencia;
+    String nombre, serie;
+    long velocidad;
+    
+    public Cohetes(){       
+    }
+
+    public Cohetes(int peso, int potencia, String nombre, String serie, long velocidad) {
+        this.peso = peso;
+        this.potencia = potencia;
+        this.nombre = nombre;
+        this.serie = serie;
+        this.velocidad = velocidad;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
+    public int getPotencia() {
+        return potencia;
+    }
+
+    public void setPotencia(int potencia) {
+        this.potencia = potencia;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getSerie() {
+        return serie;
+    }
+
+    public void setSerie(String serie) {
+        this.serie = serie;
+    }
+
+    public long getVelocidad() {
+        return velocidad;
+    }
+
+    public void setVelocidad(long velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    @Override
+    public String toString() {
+        return "Cohetes{" + "peso=" + peso + ", potencia=" + potencia + ", nombre=" + nombre + ", serie=" + serie + ", velocidad=" + velocidad + '}';
+    }
+    
+    
     
 }
