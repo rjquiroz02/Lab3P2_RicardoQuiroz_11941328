@@ -48,7 +48,7 @@ static Random rand = new Random();
                 System.out.print("Potencia: ");
                 int potencia = lea.nextInt();
                 int velocidad;
-                velocidad = rand.nextInt(5000*potencia);
+                velocidad = (5000*potencia) + (rand.nextInt(20000*potencia-5000*potencia));
                 System.out.println("1. Liquido");
                 System.out.println("2. de Fases");
                 System.out.println("3. Solido");
@@ -62,7 +62,7 @@ static Random rand = new Random();
                 if (tipo==1) {
                     System.out.print("Litros de gasolina: ");
                     int lgas = lea.nextInt();
-                    
+                    listaC.add(new CombLiquido(lgas, peso, potencia, nombre, serie, velocidad));
                 }
                 if (tipo==2) {
                     System.out.print("Fases: ");
@@ -71,7 +71,7 @@ static Random rand = new Random();
                     int motores = lea.nextInt();
                     System.out.print("Altura: ");
                     int altura = lea.nextInt();
-                    
+                    listaC.add(new DeFases(fases, motores, altura, peso, potencia, nombre, serie, velocidad));
                 }
                 if (tipo==3) {
                     System.out.print("Kilos combustible ");
@@ -79,7 +79,7 @@ static Random rand = new Random();
                     System.out.println("Material: ");
                     lea = new Scanner(System.in);
                     String material = lea.nextLine();
-                    
+                    listaC.add(new CombSolido(kiloscomb, material, peso, potencia, nombre, serie, velocidad));
                 }
                 
                 cent=true;

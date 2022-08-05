@@ -16,7 +16,7 @@ public class CombSolido extends Cohetes{
     public CombSolido(){
     }
 
-    public CombSolido(int kiloscomb, String material, int peso, int potencia, String nombre, String serie, long velocidad) {
+    public CombSolido(int kiloscomb, String material, int peso, int potencia, String nombre, String serie, int velocidad) {
         super(peso, potencia, nombre, serie, velocidad);
         this.kiloscomb = kiloscomb;
         this.material = material;

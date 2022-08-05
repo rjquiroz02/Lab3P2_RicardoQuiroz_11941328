@@ -15,7 +15,7 @@ public class DeFases extends Cohetes{
     public DeFases() {
     }
 
-    public DeFases(int fases, int motores, int altura, int peso, int potencia, String nombre, String serie, long velocidad) {
+    public DeFases(int fases, int motores, int altura, int peso, int potencia, String nombre, String serie, int velocidad) {
         super(peso, potencia, nombre, serie, velocidad);
         this.fases = fases;
         this.motores = motores;

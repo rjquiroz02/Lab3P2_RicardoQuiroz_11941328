@@ -15,7 +15,7 @@ public class CombLiquido extends Cohetes{
     public CombLiquido(){
     }
 
-    public CombLiquido(int lgas, int peso, int potencia, String nombre, String serie, long velocidad) {
+    public CombLiquido(int lgas, int peso, int potencia, String nombre, String serie, int velocidad) {
         super(peso, potencia, nombre, serie, velocidad);
         this.lgas = lgas;
     }
