@@ -6,6 +6,7 @@
 package lab3p2_ricardoquiroz_11941328;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -14,6 +15,7 @@ import java.util.Scanner;
  */
 public class Lab3P2_RicardoQuiroz_11941328 {
 static Scanner lea = new Scanner(System.in);
+static Random rand = new Random();
     /**
      * @param args the command line arguments
      */
@@ -35,7 +37,7 @@ static Scanner lea = new Scanner(System.in);
             System.out.print("Ingrese la opcion que desea: ");
             menu = lea.nextInt();
             System.out.println();
-            if (menu==1) {
+            if (menu==1) {                
                 System.out.print("Peso soportable: ");
                 int peso = lea.nextInt();
                 System.out.print("Nombre: ");
@@ -45,6 +47,8 @@ static Scanner lea = new Scanner(System.in);
                 String serie = lea.next();
                 System.out.print("Potencia: ");
                 int potencia = lea.nextInt();
+                int velocidad;
+                velocidad = rand.nextInt(5000*potencia);
                 System.out.println("1. Liquido");
                 System.out.println("2. de Fases");
                 System.out.println("3. Solido");
@@ -58,6 +62,7 @@ static Scanner lea = new Scanner(System.in);
                 if (tipo==1) {
                     System.out.print("Litros de gasolina: ");
                     int lgas = lea.nextInt();
+                    
                 }
                 if (tipo==2) {
                     System.out.print("Fases: ");
@@ -66,6 +71,7 @@ static Scanner lea = new Scanner(System.in);
                     int motores = lea.nextInt();
                     System.out.print("Altura: ");
                     int altura = lea.nextInt();
+                    
                 }
                 if (tipo==3) {
                     System.out.print("Kilos combustible ");
@@ -73,6 +79,7 @@ static Scanner lea = new Scanner(System.in);
                     System.out.println("Material: ");
                     lea = new Scanner(System.in);
                     String material = lea.nextLine();
+                    
                 }
                 
                 cent=true;

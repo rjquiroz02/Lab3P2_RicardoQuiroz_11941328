@@ -14,13 +14,13 @@ import java.util.ArrayList;
 public class Cohetes {
     private int peso, potencia;
     private String nombre, serie;
-    private long velocidad;
+    private int velocidad;
     ArrayList<Personas> persona = new ArrayList();
     
     public Cohetes(){       
     }
 
-    public Cohetes(int peso, int potencia, String nombre, String serie, long velocidad) {
+    public Cohetes(int peso, int potencia, String nombre, String serie, int velocidad) {
         this.peso = peso;
         this.potencia = potencia;
         this.nombre = nombre;
@@ -64,7 +64,7 @@ public class Cohetes {
         return velocidad;
     }
 
-    public void setVelocidad(long velocidad) {
+    public void setVelocidad(int velocidad) {
         this.velocidad = velocidad;
     }
 
