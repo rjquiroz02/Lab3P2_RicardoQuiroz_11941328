@@ -143,14 +143,16 @@ static Random rand = new Random();
                 System.out.println("---------------------------------------------------------------------------------");
                 System.out.print("Ingrese el indice del cohete que quiere editar: ");
                 int indice = lea.nextInt();
-                System.out.println("0. Salir");
-                System.out.println("1. Agregar persona");
-                System.out.println("2. Eliminar persona");
-                System.out.println("3. Listar personas");
-                boolean cent3;
                 int sub3 = 1;
+                boolean cent3;
                 while (sub3 != 0) {                    
                     cent3 = false;
+                    System.out.println("0. Salir");
+                    System.out.println("1. Agregar persona");
+                    System.out.println("2. Eliminar persona");
+                    System.out.println("3. Listar personas");                
+                    System.out.print("Ingrese opcion que desesa: ");
+                    sub3 = lea.nextInt();
                     if (sub3==1) {
                         System.out.print("Nombre: ");
                         lea = new Scanner(System.in);
@@ -159,7 +161,7 @@ static Random rand = new Random();
                         int edad = lea.nextInt();
                         System.out.print("Peso: ");
                         int peso = lea.nextInt();
-                        listaC.get(indice).getPersona().add(new Personas(nombre, edad, peso));                                               
+                        listaC.get(indice).getPersona().add(new Personas(nombre, edad, peso));
                         
                         cent3 = true;
                     }
@@ -167,7 +169,7 @@ static Random rand = new Random();
                         System.out.println("-------------------------------Personas-------------------------------------------");
                         String out1 = "";
                             for (Personas object : listaC.get(indice).getPersona()) {                               
-                                    out1+="["+listaC.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
+                                    out1+="["+listaC.get(indice).getPersona().indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
                             }
                             System.out.println(out1);
                         System.out.println("----------------------------------------------------------------------------------");
@@ -182,7 +184,7 @@ static Random rand = new Random();
                         System.out.println("-------------------------------Personas-------------------------------------------");
                         String out1 = "";
                             for (Personas object : listaC.get(indice).getPersona()) {                               
-                                    out1+="["+listaC.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
+                                    out1+="["+listaC.get(indice).getPersona().indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
                             }
                             System.out.println(out1);
                         System.out.println("----------------------------------------------------------------------------------"); 
@@ -205,15 +207,17 @@ static Random rand = new Random();
                             System.out.println(out);
                 System.out.println("---------------------------------------------------------------------------------");
                 System.out.print("Ingrese el indice del planeta que quiere editar: ");
-                int indice = lea.nextInt();
-                System.out.println("0. Salir");
-                System.out.println("1. Agregar luna");
-                System.out.println("2. Eliminar luna");
-                System.out.println("3. Listar lunas");
-                boolean cent4;
-                int sub4 = 1;
+                int indice = lea.nextInt();                                
+                boolean cent4;               
+                int sub4 = 1;                
                 while (sub4 != 0) {                    
                     cent4 = false;
+                    System.out.println("0. Salir");
+                    System.out.println("1. Agregar luna");
+                    System.out.println("2. Eliminar luna");
+                    System.out.println("3. Listar lunas");
+                    System.out.print("Ingrese opcion que desesa: ");
+                    sub4 = lea.nextInt();
                     if (sub4==1) {
                         System.out.print("Nombre: ");
                         lea = new Scanner(System.in);
@@ -228,7 +232,7 @@ static Random rand = new Random();
                         System.out.println("-------------------------------Lunas-------------------------------------------");
                         String out1 = "";
                             for (Lunas object : listaP.get(indice).getLuna()) {                               
-                                    out1+="["+listaC.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
+                                    out1+="["+listaP.get(indice).getLuna().indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
                             }
                             System.out.println(out1);
                         System.out.println("-------------------------------------------------------------------------------");
@@ -242,8 +246,8 @@ static Random rand = new Random();
                     if (sub4==3) {
                         System.out.println("-------------------------------Lunas-------------------------------------------");
                         String out1 = "";
-                            for (Personas object : listaC.get(indice).getPersona()) {                               
-                                    out1+="["+listaC.indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
+                            for (Lunas object : listaP.get(indice).getLuna()) {                               
+                                    out1+="["+listaP.get(indice).getLuna().indexOf(object)+"]"+" -> "+object.toString()+"\n";                               
                             }
                             System.out.println(out1);
                         System.out.println("-------------------------------------------------------------------------------"); 
