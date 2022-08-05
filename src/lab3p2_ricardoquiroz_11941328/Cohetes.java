@@ -78,7 +78,7 @@ public class Cohetes {
 
     @Override
     public String toString() {
-        return "Cohetes{" + "peso=" + peso + ", potencia=" + potencia + ", nombre=" + nombre + ", serie=" + serie + ", velocidad=" + velocidad + ", persona=" + persona + '}';
+        return "Cohetes{" + "peso=" + peso + ", potencia=" + potencia + ", nombre=" + nombre + ", serie=" + serie + ", velocidad=" + velocidad + ", personas=" + persona + '}';
     }
     
        

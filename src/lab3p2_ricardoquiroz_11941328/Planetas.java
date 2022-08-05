@@ -77,7 +77,7 @@ public class Planetas {
 
     @Override
     public String toString() {
-        return "Planetas{" + "nombre=" + nombre + ", masa=" + masa + ", radio=" + radio + ", temperatura=" + temperatura + ", vel=" + vel + ", luna=" + luna + '}';
+        return "Planetas{" + "nombre=" + nombre + ", masa=" + masa + ", radio=" + radio + ", temperatura=" + temperatura + ", vel=" + vel + ", lunas=" + luna + '}';
     }
 
     

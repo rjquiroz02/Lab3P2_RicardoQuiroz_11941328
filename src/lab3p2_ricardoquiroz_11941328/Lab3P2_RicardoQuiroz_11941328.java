@@ -5,6 +5,7 @@
  */
 package lab3p2_ricardoquiroz_11941328;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -19,6 +20,8 @@ static Scanner lea = new Scanner(System.in);
     public static void main(String[] args) {
         boolean cent;
         int menu=1;
+        ArrayList<Planetas> listaP  = new ArrayList();
+        ArrayList<Cohetes> listaC = new ArrayList();
         while (menu != 0) {            
             cent=false;
             System.out.println("0. Salir");
@@ -42,6 +45,16 @@ static Scanner lea = new Scanner(System.in);
                 String serie = lea.next();
                 System.out.print("Potencia: ");
                 int potencia = lea.nextInt();
+                System.out.println("1. Liquido");
+                System.out.println("2. de Fases");
+                System.out.println("3. Solido");
+                System.out.print("Tipo: ");
+                int tipo = lea.nextInt();
+                while (tipo > 3 && tipo < 1) {                    
+                    System.out.println("Ingrese un tipo correcto");
+                    System.out.print("Tipo: ");
+                    tipo = lea.nextInt();
+                }
                 
                 
                 cent=true;
